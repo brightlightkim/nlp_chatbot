@@ -1,0 +1,44 @@
+@import url(//fonts.googleapis.com/earlyaccess/nats.css);
+.header {
+    background-color: black;
+    font-family: 'NATS', sans-serif;
+    display: flex;
+}
+
+.logo{
+    padding: 1%;
+}
+.carousel{
+    
+    padding: 1%;
+    display: inline-block;
+
+}
+.menu a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 50px;
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+    transition: 0.7s;
+}
+
+.menu a:hover{
+    color:rgb(227, 113, 255);
+    top: -10px;
+}
+
+.menu{    
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: 2%;
+    color: white;
+    padding: 5px 0;
+}
