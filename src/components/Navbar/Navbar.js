@@ -6,7 +6,9 @@ export default function Navbar(){
     return (
 
         <div className="header">
-            <img className='logo' src={logo} alt="Logo" />
+            <a className='logo_container' href='/'>
+                <img src={logo} alt="Logo" />
+            </a>
             <div className='menu'>
                 <a href="/about">About</a>
                 <a href="/contact">Contact Us</a>                    

@@ -1,0 +1,38 @@
+
+.nlp_chat_container{
+  display: flex;
+}
+
+.user_chat_container{
+  display: flex;
+  justify-content: right;
+}
+  
+.user_chatbox, .nlp_chatbox{
+  display: inline-block;
+  align-self: stretch;
+  max-width: 70%;
+  border-radius: 20px;
+  padding: 10% 5%;
+  font-size: 1.5em;
+  margin-bottom: 2%;
+}
+
+.user_chatbox{ 
+  /* Right Element */
+  text-align: right;
+  background-color: rgb(35, 121, 192);
+  color: #fff;
+}
+
+.nlp_chatbox{
+  /* Left Element */
+  text-align: left;
+  background-color: rgb(132, 35, 192);
+  color: #fff;
+}
+
+.eve{
+  width: 100%;
+  height: 100%;
+}

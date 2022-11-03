@@ -3,11 +3,15 @@
     background-color: black;
     font-family: 'NATS', sans-serif;
     display: flex;
+    align-items: center;
 }
 
-.logo{
-    padding: 1%;
+.logo_container {
+    display: flex;
+    align-items: center;
+    padding: 2%;
 }
+
 .carousel{
     
     padding: 1%;

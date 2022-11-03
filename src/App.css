@@ -50,19 +50,21 @@ html {
 }
 
 input{
+  border-radius: 25px 0px 0px 25px;
+  padding-left: 20px;
   width: 80%;
   font-size: 2em;
 }
 
 .submit {
-  background: #d40083;
+  background: rgb(37, 157, 255);
   color: #fff;
   cursor: pointer;
   margin-bottom: 0;
   text-transform: uppercase;
   width: 20%;
   font-size: 2em;
-  border-radius: 5px;
+  border-radius: 0px 25px 25px 0px;
   height: 100%;
   border-color: transparent;
   box-shadow: 0px;
@@ -71,10 +73,15 @@ input{
   text-align: center;
 }
 
+.submit:hover {
+  background-color: rgb(72, 173, 255);
+}
+
 .userinput{
   position: absolute;
   bottom: 0;
   flex-direction: row;
+  border-radius: 25px;
   display: flex;
   width: 100%;
   height: 10%;
@@ -86,8 +93,9 @@ input{
   flex-direction: column;
   font-family: 'NATS', sans-serif;
   background-color: #000000;
-  width: 80%;
+  width: 100%;
   height: 1000px;
+  border-radius: 0px 0px 25px 25px;
 }
 
 .chat_container{
@@ -95,8 +103,12 @@ input{
   flex-direction: column;
   overflow-y:auto;
   height: 90%;
-  padding: 5%;
-  padding-bottom: 18%;
+  padding: 2%;
+  padding-bottom: 15%;
+}
+
+.nlp_chat_container{
+  display: flex;
 }
 
 .user_chatbox, .nlp_chatbox{
@@ -111,13 +123,25 @@ input{
 .user_chatbox{ 
   /* Right Element */
   text-align: right;
-  background-color: rgb(35, 121, 192);
+  background-color: rgb(37, 157, 255);
   color: #fff;
 }
 
 .nlp_chatbox{
   /* Left Element */
   text-align: left;
-  background-color: rgb(132, 35, 192);
+  background-color: rgb(177, 50, 255);
   color: #fff;
+}
+
+.eve{
+  width: 80px;
+  height: 80px;
+  border-radius: 40px;
+  margin-right: 5px;
+}
+
+.send_icon{
+  width: 80px;
+  height: auto;
 }
