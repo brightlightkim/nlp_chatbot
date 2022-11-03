@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .App {
   text-align: center;
 }
@@ -92,21 +96,27 @@ input{
   overflow-y:auto;
   height: 90%;
   padding: 5%;
+  padding-bottom: 18%;
 }
 
 .user_chatbox, .nlp_chatbox{
   display: inline-block;
   align-self: stretch;
-  margin-bottom: 5%;
+  border-radius: 20px;
+  padding: 2%;
+  font-size: 1.5em;
+  margin-bottom: 2%;
 }
 
-.user_chatbox{
+.user_chatbox{ 
+  /* Right Element */
   text-align: right;
   background-color: rgb(35, 121, 192);
   color: #fff;
 }
 
 .nlp_chatbox{
+  /* Left Element */
   text-align: left;
   background-color: rgb(132, 35, 192);
   color: #fff;
