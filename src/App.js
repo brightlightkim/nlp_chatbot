@@ -13,7 +13,7 @@ function App() {
 
   const handleClick = (event) => {
     // Display User Input First
-    setChatItems(oldChatItems => [...chatItems, message])
+    setChatItems(oldChatItems => [...chatItems, message, '...'])
     // Then fetch the nlp backend response and add it to the chat items
     fetch(`http://127.0.0.1:5000/?text=${message}`) //Fix this url with the user input
     .then(response => response.json())
@@ -29,7 +29,6 @@ function App() {
   }
 
   useEffect(()=>{
-    console.log(chatItems)
     executeScroll()
   }, [chatItems]) 
 
