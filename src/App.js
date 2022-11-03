@@ -11,13 +11,16 @@ function App() {
     setMessage(event.target.value)
   }
 
-  const handleClick = () => {
+  const handleClick = (event) => {
     // Display User Input First
     setChatItems(oldChatItems => [...chatItems, message])
     // Then fetch the nlp backend response and add it to the chat items
     fetch(`http://127.0.0.1:5000/?text=${message}`) //Fix this url with the user input
     .then(response => response.json())
     .then(json => setChatItems(oldChatItems => [...chatItems, message, json.response]))
+
+    event.preventDefault() // Prevent the HTML form behavior
+    setMessage('') // Reset the change
   }
 
   useEffect(()=>{
@@ -38,7 +41,7 @@ function App() {
           })}
         </div>
         
-        <div className='userinput'>
+        <form className='userinput' onSubmit={handleClick}>
           <input
             type="chat"
             id="message"
@@ -53,7 +56,7 @@ function App() {
           <button className='submit' onClick={handleClick}>
             Send
           </button>
-        </div>
+        </form>
       </div>
     </>
   );
