@@ -80,7 +80,7 @@ input{
   position: relative;
   display: flex;
   flex-direction: column;
-  float:left;
+  overflow-y:auto;
   font-family: 'NATS', sans-serif;
   background-color: #9c9a9a;
   width: 80%;

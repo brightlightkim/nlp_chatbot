@@ -5,23 +5,24 @@ import './App.css';
 
 function App() {
   const [chatItems, setChatItems] = useState(['Welcome to EVE. How can I help you?'])
-  const [items, setItems] = useState([])
   const [message, setMessage] = useState('')
-  const [updated, setUpdated] = useState(message)
 
   const handleChange = (event) => {
+    //Update the value of message each time it changes.
     setMessage(event.target.value)
   }
 
   const handleClick = () => {
-    setChatItems(...chatItems, message)
-    fetch(`http://127.0.0.1:5000/?text=hi`)
+    // Display User Input First
+    setChatItems(oldChatItems => [...chatItems, message])
+    // Then fetch the nlp backend response and add it to the chat items
+    fetch(`http://127.0.0.1:5000/?text=${message}`) //Fix this url with the user input
     .then(response => response.json())
-    .then(json => setChatItems(...chatItems, json.message))
+    .then(json => setChatItems(oldChatItems => [...chatItems, message, json.response]))
   }
 
   useEffect(()=>{
-    
+    console.log(chatItems)
   }, [chatItems]) 
 
   return (
@@ -29,7 +30,13 @@ function App() {
       <Navbar/>
       <div className="container">
         <ul>
-          {chatItems}
+          {chatItems.map((item, index)=>{
+            if (index % 2 == 0){
+              return <li key={index}>{item}</li>
+            } else {
+              return <li key={index}>{item}</li>
+            }
+          })}
         </ul>
         
         <div className='userinput'>
