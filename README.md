@@ -1,4 +1,4 @@
-# EVE Front End
+# NLP Front End
 ## Tech Stack
 React + JavaScript
 ## Run Instruction
