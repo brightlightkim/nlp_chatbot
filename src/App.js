@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import Navbar from './components/Navbar/Navbar';
-import styled from 'styled-components';
 import './App.css';
 
 function App() {
@@ -29,15 +28,15 @@ function App() {
     <>
       <Navbar/>
       <div className="container">
-        <ul>
+        <div className='chat_container'>
           {chatItems.map((item, index)=>{
-            if (index % 2 == 0){
-              return <li key={index}>{item}</li>
+            if (index % 2 === 0){
+              return <div className='nlp_chatbox' key={index}>{item}</div>
             } else {
-              return <li key={index}>{item}</li>
+              return <div className='user_chatbox' key={index}>{item}</div>
             }
           })}
-        </ul>
+        </div>
         
         <div className='userinput'>
           <input
